@@ -7,5 +7,5 @@ class Transfer
     @receiver = receiver
     @status = status
     @transfer_amount = transfer_amount
-      
+
 end
