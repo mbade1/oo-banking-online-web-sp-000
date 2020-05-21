@@ -13,7 +13,9 @@ class Transfer
   end
 
   def execute_transaction
+    #if the sender and receiver are valid; the sender's balance is large enough for the amount to be transferred; and the status is pending...
     if (@sender.valid? && @receiver.valid?) && (@sender.balance > @amount && @sender.status = "pending")
+      #execute the transaction by taking the amount out of the sender and adding it to the receiver. Also change the status to complete so it doesn't execute multiple times.
       @sender.balance -= @amount
       @receiver.balance += @amount
       @status = "complete"
