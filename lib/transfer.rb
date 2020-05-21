@@ -20,12 +20,14 @@ class Transfer
       @receiver.balance += @amount
       @status = "complete"
     else
+      #Otherwise, change the status to rejected and tell the user their account balance is too low.
       @status = "rejected"
       "Transaction rejected. Please check your account balance."
     end
   end
 
   def reverse_transfer
+    #If the transfer is done and the status is already complete, send the $$ back to the sender and change the status.
     if @status == "complete"
       @sender.balance += @amount
       @receiver.balance -= @amount
