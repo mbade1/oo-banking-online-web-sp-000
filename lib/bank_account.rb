@@ -30,9 +30,8 @@ class BankAccount
   end
 
   def close_account
-    if !valid?
-      @status = "closed"
-    end
+    @status = "closed"
   end
+  
 
 end
