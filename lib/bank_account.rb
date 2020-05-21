@@ -1,7 +1,7 @@
 class BankAccount
   #can't change its name - reader attr
   attr_reader :name
-  
+
   attr_accessor :balance, :status
 
   #initializes with a name, $1000, and status of "open"
@@ -15,7 +15,7 @@ class BankAccount
   def deposit(amount)
     @balance += amount
   end
-  
+
   #Displays the current balance
   def display_balance
     "Your balance is $#{@balance}."
