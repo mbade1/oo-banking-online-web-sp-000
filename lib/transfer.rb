@@ -9,6 +9,7 @@ class Transfer
   end
 
   def valid?
+    #if the sender AND receiver's account in the Bank_account class is valid, then true. Otherwise, false.
     @sender.valid? && receiver.valid? ? true : false
   end
 
